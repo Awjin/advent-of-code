@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "solve": "npx ts-node solve.ts"
+  },
+  "dependencies": {
+    "prettier": "^2.5.1",
+    "ts-node": "^10.4.0"
+  }
+}
