@@ -1,7 +1,9 @@
 import { readFileSync } from "fs";
 
 export function readInput(problem: number): string[][] {
-  const contents = readFileSync(`src/${problem}/input`).toString().split("\n");
-  contents.pop();
-  return contents.map((line) => line.split(" "));
+  return readFileSync(`src/${problem}/input`)
+    .toString()
+    .trim()
+    .split("\n")
+    .map((line) => line.trim().split(/\s+/));
 }
