@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 
-export function readInput(problem: number): string[][] {
-  return readFileSync(`src/${problem}/input`)
+export function readInput(day: number): string[][] {
+  return readFileSync(`src/${day}/input`)
     .toString()
     .trim()
     .split("\n")

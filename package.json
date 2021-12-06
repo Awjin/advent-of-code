@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "scaffold": "npx ts-node scaffold.ts",
     "solve": "npx ts-node solve.ts"
   },
   "dependencies": {
