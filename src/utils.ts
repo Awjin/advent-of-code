@@ -5,5 +5,6 @@ export function readInput(problem: number): string[][] {
     .toString()
     .trim()
     .split("\n")
+    .filter((line) => line.length > 1 && line[0] !== "\n")
     .map((line) => line.trim().split(/\s+/));
 }
