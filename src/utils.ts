@@ -1,7 +1,8 @@
 import { readFileSync } from "fs";
 
 export function readInput(day: number): string[][] {
-  return readFileSync(`src/${day}/input`)
+  const input = process.env["aoc-test"] ? "test" : "input";
+  return readFileSync(`src/${day}/${input}`)
     .toString()
     .trim()
     .split("\n")

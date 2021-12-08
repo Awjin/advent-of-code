@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "scaffold": "npx ts-node scaffold.ts",
-    "solve": "npx ts-node solve.ts"
+    "scaffold": "npx ts-node scripts/scaffold.ts",
+    "solve": "npx ts-node scripts/solve.ts",
+    "test": "npx ts-node scripts/test.ts"
   },
   "dependencies": {
     "prettier": "^2.5.1",
