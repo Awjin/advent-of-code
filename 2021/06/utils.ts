@@ -1,4 +1,4 @@
-import { readInput } from "../utils";
+import { read } from "../../utils/input";
 
 export function getPopulationSize(initialFish: number[], days: number): number {
   // The breeding calendar is a circular list, so its length needs to be at
@@ -21,7 +21,7 @@ export function getPopulationSize(initialFish: number[], days: number): number {
 }
 
 export function getData(): number[] {
-  return readInput(6)[0][0]
+  return read(2021, 6)[0][0]
     .split(",")
     .map((num) => parseInt(num));
 }

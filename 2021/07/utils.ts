@@ -1,7 +1,7 @@
-import { readInput } from "../utils";
+import { read } from "../../utils/input";
 
 export function getData(): number[] {
-  return readInput(7)[0][0]
+  return read(2021, 7)[0][0]
     .split(",")
     .map((num) => parseInt(num));
 }

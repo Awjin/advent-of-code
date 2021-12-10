@@ -1,4 +1,4 @@
-import { readInput } from "../utils";
+import { read } from "../../utils/input";
 
 class Board {
   static size = 5;
@@ -50,7 +50,7 @@ class Board {
 }
 
 export function getData(): { calledNums: number[]; boards: Board[] } {
-  const input = readInput(4);
+  const input = read(2021, 4);
 
   const calledNums = input[0][0].split(",").map((num) => parseInt(num));
 

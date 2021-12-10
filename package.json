@@ -1,8 +1,11 @@
 {
+  "engines": {
+    "node": ">=17.0.0"
+  },
   "scripts": {
-    "scaffold": "npx ts-node scripts/scaffold.ts",
-    "solve": "npx ts-node scripts/solve.ts",
-    "test": "npx ts-node scripts/test.ts"
+    "scaffold": "npx ts-node utils/scaffold.ts",
+    "solve": "npx ts-node utils/solve.ts",
+    "test": "npx ts-node utils/test.ts"
   },
   "dependencies": {
     "prettier": "^2.5.1",

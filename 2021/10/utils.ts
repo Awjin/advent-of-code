@@ -1,4 +1,4 @@
-import { readInput } from "../utils";
+import { read } from "../../utils/input";
 
 export class IllegalCharError extends Error {
   constructor(readonly char: string) {
@@ -41,5 +41,5 @@ export function parse(line: string): void {
 }
 
 export function getData(): string[] {
-  return readInput(10).flatMap((line) => line);
+  return read(2021, 10).flatMap((line) => line);
 }

@@ -1,11 +1,21 @@
-# Advent of Code 2021
+# ❄️ [Advent of Code](https://adventofcode.com) ❄️
 
-🎅 https://adventofcode.com/2021 🎅
+- To run a solution:
 
-To run solutions:
+  ```bash
+  npm run solve -- $year $day $part
 
-```bash
-npm run solve -- $day $part
+  #=> npm run solve -- 2021 4 2
+  ```
 
-# For example: npm run solve -- 1 1
-```
+- To run against test input:
+
+  ```bash
+  npm run test -- $year $day $part
+  ```
+
+- To scaffold a directory for solving a new day:
+
+  ```bash
+  npm run scaffold -- $year $day
+  ```

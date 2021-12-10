@@ -1,4 +1,4 @@
-import { readInput } from "../utils";
+import { read } from "../../utils/input";
 
 interface Command {
   direction: string;
@@ -6,7 +6,7 @@ interface Command {
 }
 
 export function getData(): Command[] {
-  return readInput(2).map((line) => {
+  return read(2021, 2).map((line) => {
     return {
       direction: line[0],
       distance: parseInt(line[1]),

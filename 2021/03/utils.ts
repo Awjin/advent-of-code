@@ -1,4 +1,4 @@
-import { readInput } from "../utils";
+import { read } from "../../utils/input";
 
 export const binaryNumLength = 12;
 
@@ -12,5 +12,5 @@ export function mostCommonBitMask(binaryNums: number[], index: number): number {
 }
 
 export function getData(): number[] {
-  return readInput(3).map((line) => parseInt(line[0], 2));
+  return read(2021, 3).map((line) => parseInt(line[0], 2));
 }

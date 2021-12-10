@@ -1,4 +1,4 @@
-import { readInput } from "../utils";
+import { read } from "../../utils/input";
 
 export interface Node {
   row: number;
@@ -32,7 +32,7 @@ export function findNeighbors(nodes: Node[][], curr: Node): Node[] {
 
 export function getData(): Node[][] {
   const nodes: Node[][] = [];
-  readInput(9).forEach((line, i) => {
+  read(2021, 9).forEach((line, i) => {
     const row: Node[] = [];
     line[0].split("").forEach((num, j) => {
       row.push({

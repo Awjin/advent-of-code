@@ -1,4 +1,4 @@
-import { readInput } from "../utils";
+import { read } from "../../utils/input";
 
 interface Line {
   x1: number;
@@ -28,7 +28,7 @@ export function getOverlapCount(lines: Line[]): number {
 }
 
 export function getData(): Line[] {
-  return readInput(5).map((line) => {
+  return read(2021, 5).map((line) => {
     const start = line[0].split(",").map((num) => parseInt(num));
     const end = line[2].split(",").map((num) => parseInt(num));
     return {
