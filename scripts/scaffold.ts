@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from "fs";
+import { dayString } from "../src/utils";
 
-const day = process.argv[2];
+const day = dayString(process.argv[2]);
 const dir = `src/${day}`;
 
 mkdirSync(`${dir}`);
