@@ -10,14 +10,20 @@ mkdirSync(`${dir}`);
 writeFileSync(`${dir}/README.md`, "");
 writeFileSync(`${dir}/input`, "");
 writeFileSync(`${dir}/test`, "");
-writeFileSync(`${dir}/part1.ts`, 'import { getData } from "./utils";\n\n');
-writeFileSync(`${dir}/part2.ts`, 'import { getData } from "./utils";\n\n');
+writeFileSync(
+  `${dir}/part1.ts`,
+  `import { getData } from "./utils";
+
+console.log(getData());
+`
+);
+writeFileSync(`${dir}/part2.ts`, "");
 writeFileSync(
   `${dir}/utils.ts`,
   `import { read } from "../../utils/input";
 
 export function getData() {
-  return read(${year}, ${day}).map((line) => {});
+  return read(${year}, ${day});
 }
 `
 );
