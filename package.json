@@ -10,5 +10,9 @@
   "dependencies": {
     "prettier": "^2.5.1",
     "ts-node": "^10.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "typescript": "^4.9.3"
   }
 }

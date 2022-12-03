@@ -3,27 +3,37 @@ import { mkdirSync, writeFileSync } from "fs";
 import { dayString } from "./input";
 
 const year = process.argv[2];
-const day = dayString(process.argv[3]);
-const dir = `${year}/${day}`;
+const day = process.argv[3];
 
-mkdirSync(`${dir}`);
-writeFileSync(`${dir}/README.md`, "");
-writeFileSync(`${dir}/input`, "");
-writeFileSync(`${dir}/test`, "");
-writeFileSync(
-  `${dir}/part1.ts`,
-  `import { getData } from "./utils";
-
-console.log(getData());
-`
-);
-writeFileSync(`${dir}/part2.ts`, "");
-writeFileSync(
-  `${dir}/utils.ts`,
-  `import { read } from "../../utils/input";
+if (!year || !day) {
+  console.log("  Invalid input.\n", " Usage: npm run scaffold -- $year $day");
+} else {
+  const dir = `${year}/${dayString(day)}`;
+  mkdirSync(`${dir}`, { recursive: true });
+  write(`${dir}/README.md`, "");
+  write(`${dir}/test`, "");
+  write(`${dir}/input`, "");
+  write(
+    `${dir}/utils.ts`,
+    `import { read } from "../../utils/input";
 
 export function getData() {
   return read(${year}, ${day});
 }
 `
-);
+  );
+  write(
+    `${dir}/part1.ts`,
+    `import { getData } from "./utils";
+
+console.log(getData());
+`
+  );
+  write(`${dir}/part2.ts`, "");
+}
+
+function write(filename: string, contents: string) {
+  try {
+    writeFileSync(filename, contents, { flag: "wx" });
+  } catch (_) {}
+}

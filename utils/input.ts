@@ -1,15 +1,25 @@
 import { readFileSync } from "fs";
 
-export function read(year: number, day: number): string[][] {
+export function read(
+  year: number,
+  day: number,
+  options?: { preserveNewlines: boolean }
+): string[][] {
   const input = process.env["test"] ? "test" : "input";
   return readFileSync(`${year}/${dayString(day)}/${input}`)
     .toString()
     .trim()
-    .split(/\n+/)
-    .map((line) => line.trim().split(/\s+/));
+    .split(options?.preserveNewlines ? /\n/ : /\n+/)
+    .map((line: string) =>
+      line
+        .trim()
+        .split(/\s+/)
+        .map((value: string) => (value === "" ? "\n" : value))
+    );
 }
 
-export function dayString(day: number | string) {
+export function dayString(day?: number | string): string | undefined {
+  if (day === undefined) return undefined;
   let dayString = `${day}`;
   return dayString.length === 1 ? `0${dayString}` : dayString;
 }
