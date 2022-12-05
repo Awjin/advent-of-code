@@ -1,6 +1,6 @@
 import { read } from "../../utils/input";
 
-export function getData() {
+export function getData(): number[][] {
   return read(2022, 3).map(([rucksack]) =>
     rucksack
       .split("")

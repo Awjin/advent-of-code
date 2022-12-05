@@ -3,7 +3,7 @@ import { read } from "../../utils/input";
 export type Shape = "rock" | "paper" | "scissors";
 export type Result = "win" | "loss" | "draw";
 
-export function getData() {
+export function getData(): string[][] {
   return read(2022, 2);
 }
 
