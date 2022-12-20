@@ -31,7 +31,7 @@ const resultScores: Record<Result, number> = {
   draw: 3,
 };
 
-export function score(strategy: Shape[][]) {
+export function score(strategy: Shape[][]): number {
   return strategy
     .map(([enemy, me]) => {
       const result =

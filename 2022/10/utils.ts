@@ -9,7 +9,7 @@ export function getData(): string[][] {
   return read(2022, 10);
 }
 
-export function exec(ops: string[][], beforeEach: (cpu: Cpu) => void) {
+export function exec(ops: string[][], beforeEach: (cpu: Cpu) => void): void {
   let cpu = {
     cycle: 1,
     registerX: 1,
