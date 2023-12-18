@@ -12,7 +12,9 @@ export function read(
     `${year}/${dayString(day)}/${process.env["test"] ? "test" : "input"}`
   ).toString();
 
-  if (!options?.preserveSpaces) {
+  if (options?.preserveSpaces) {
+    file = file.replace(/\n$/, "");
+  } else {
     file = file.trim();
   }
 

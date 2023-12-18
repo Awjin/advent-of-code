@@ -10,7 +10,7 @@ export function getData(): { stacks: string[][]; procedure: Instruction[] } {
   const data = read(2022, 5, { preserveSpaces: true, preserveNewlines: true });
   const split = data.findIndex(([value]) => value === "\n");
   const firstHalf = data.slice(0, split - 1);
-  const secondHalf = data.slice(split + 1, -1);
+  const secondHalf = data.slice(split + 1);
 
   const rows = firstHalf.map(([line]) => {
     const fixedWidthColumns = /.{1,4}/g;
